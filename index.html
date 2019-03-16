@@ -205,10 +205,10 @@ $(document).ready(function() {
 </div>
 
 <h1.0 id="introduction" href="#introduction" class="definition">
-<span class="number">1</span>Introduction
+<a href="#TOC" class="toc-link"></a><span class="number">1</span>Introduction
 </h1.0>
 <h2.0 id="what-is-markdown-" href="#what-is-markdown-" class="definition">
-<span class="number">1.1</span>What is Markdown?
+<a href="#TOC" class="toc-link"></a><span class="number">1.1</span>What is Markdown?
 </h2.0>
 <p>Markdown is a plain text format for writing structured documents,
 based on conventions for indicating formatting in email
@@ -294,7 +294,7 @@ to worry about indentation.  But the Markdown version is much easier
 to read.  The nesting of list items is apparent to the eye in the
 source, not just in the processed document.</p>
 <h2.0 id="why-is-a-spec-needed-" href="#why-is-a-spec-needed-" class="definition">
-<span class="number">1.2</span>Why is a spec needed?
+<a href="#TOC" class="toc-link"></a><span class="number">1.2</span>Why is a spec needed?
 </h2.0>
 <p>John Gruber’s <a href="http://daringfireball.net/projects/markdown/syntax">canonical description of Markdown’s
 syntax</a>
@@ -433,7 +433,7 @@ renders differently on another (say, converting to docbook using
 pandoc).  To make matters worse, because nothing in Markdown counts
 as a “syntax error,” the divergence often isn’t discovered right away.</p>
 <h2.0 id="about-this-document" href="#about-this-document" class="definition">
-<span class="number">1.3</span>About this document
+<a href="#TOC" class="toc-link"></a><span class="number">1.3</span>About this document
 </h2.0>
 <p>This document attempts to specify Markdown syntax unambiguously.
 It contains many examples with side-by-side Markdown and
@@ -454,10 +454,10 @@ The script <code>tools/makespec.py</code> can be used to convert <code>spec.txt<
 HTML or CommonMark (which can then be converted into other formats).</p>
 <p>In the examples, the <code>→</code> character is used to represent tabs.</p>
 <h1.0 id="preliminaries" href="#preliminaries" class="definition">
-<span class="number">2</span>Preliminaries
+<a href="#TOC" class="toc-link"></a><span class="number">2</span>Preliminaries
 </h1.0>
 <h2.0 id="characters-and-lines" href="#characters-and-lines" class="definition">
-<span class="number">2.1</span>Characters and lines
+<a href="#TOC" class="toc-link"></a><span class="number">2.1</span>Characters and lines
 </h2.0>
 <p>Any sequence of <a href="#character">characters</a> is a valid CommonMark
 document.</p>
@@ -499,7 +499,7 @@ is <code>!</code>, <code>&quot;</code>, <code>#</code>, <code>$</code>, <code>%<
 punctuation character</a> or anything in
 the general Unicode categories  <code>Pc</code>, <code>Pd</code>, <code>Pe</code>, <code>Pf</code>, <code>Pi</code>, <code>Po</code>, or <code>Ps</code>.</p>
 <h2.0 id="tabs" href="#tabs" class="definition">
-<span class="number">2.2</span>Tabs
+<a href="#TOC" class="toc-link"></a><span class="number">2.2</span>Tabs
 </h2.0>
 <p>Tabs in lines are not expanded to <a href="#space">spaces</a>.  However,
 in contexts where whitespace helps to define block structure,
@@ -707,12 +707,12 @@ bar
 </div>
 </div>
 <h2.0 id="insecure-characters" href="#insecure-characters" class="definition">
-<span class="number">2.3</span>Insecure characters
+<a href="#TOC" class="toc-link"></a><span class="number">2.3</span>Insecure characters
 </h2.0>
 <p>For security reasons, the Unicode character <code>U+0000</code> must be replaced
 with the REPLACEMENT CHARACTER (<code>U+FFFD</code>).</p>
 <h1.0 id="blocks-and-inlines" href="#blocks-and-inlines" class="definition">
-<span class="number">3</span>Blocks and inlines
+<a href="#TOC" class="toc-link"></a><span class="number">3</span>Blocks and inlines
 </h1.0>
 <p>We can think of a document as a sequence of
 <a id="blocks" href="#blocks" class="definition">blocks</a>—structural elements like paragraphs, block
@@ -721,7 +721,7 @@ block quotes and list items) contain other blocks; others (like
 headings and paragraphs) contain <a id="inline" href="#inline" class="definition">inline</a> content—text,
 links, emphasized text, images, code spans, and so on.</p>
 <h2.0 id="precedence" href="#precedence" class="definition">
-<span class="number">3.1</span>Precedence
+<a href="#TOC" class="toc-link"></a><span class="number">3.1</span>Precedence
 </h2.0>
 <p>Indicators of block structure always take precedence over indicators
 of inline structure.  So, for example, the following is a list with
@@ -752,19 +752,19 @@ step.  Note that the first step requires processing lines in sequence,
 but the second can be parallelized, since the inline parsing of
 one block element does not affect the inline parsing of any other.</p>
 <h2.0 id="container-blocks-and-leaf-blocks" href="#container-blocks-and-leaf-blocks" class="definition">
-<span class="number">3.2</span>Container blocks and leaf blocks
+<a href="#TOC" class="toc-link"></a><span class="number">3.2</span>Container blocks and leaf blocks
 </h2.0>
 <p>We can divide blocks into two types:
 <a id="container-block" href="#container-block" class="definition">container block</a>s,
 which can contain other blocks, and <a id="leaf-block" href="#leaf-block" class="definition">leaf block</a>s,
 which cannot.</p>
 <h1.0 id="leaf-blocks" href="#leaf-blocks" class="definition">
-<span class="number">4</span>Leaf blocks
+<a href="#TOC" class="toc-link"></a><span class="number">4</span>Leaf blocks
 </h1.0>
 <p>This section describes the different kinds of leaf block that make up a
 Markdown document.</p>
 <h2.0 id="thematic-breaks" href="#thematic-breaks" class="definition">
-<span class="number">4.1</span>Thematic breaks
+<a href="#TOC" class="toc-link"></a><span class="number">4.1</span>Thematic breaks
 </h2.0>
 <p>A line consisting of 0-3 spaces of indentation, followed by a sequence
 of three or more matching <code>-</code>, <code>_</code>, or <code>*</code> characters, each followed
@@ -1088,7 +1088,7 @@ interpretations of a line, the thematic break takes precedence:</p>
 </div>
 </div>
 <h2.0 id="atx-headings" href="#atx-headings" class="definition">
-<span class="number">4.2</span>ATX headings
+<a href="#TOC" class="toc-link"></a><span class="number">4.2</span>ATX headings
 </h2.0>
 <p>An <a id="atx-heading" href="#atx-heading" class="definition">ATX heading</a>
 consists of a string of characters, parsed as inline content, between an
@@ -1402,7 +1402,7 @@ Bar<span class="space"> </span>foo
 </div>
 </div>
 <h2.0 id="setext-headings" href="#setext-headings" class="definition">
-<span class="number">4.3</span>Setext headings
+<a href="#TOC" class="toc-link"></a><span class="number">4.3</span>Setext headings
 </h2.0>
 <p>A <a id="setext-heading" href="#setext-heading" class="definition">setext heading</a> consists of one or more
 lines of text, each containing at least one <a href="#non-whitespace-character">non-whitespace
@@ -1936,7 +1936,7 @@ baz&lt;/p&gt;
 </div>
 </div>
 <h2.0 id="indented-code-blocks" href="#indented-code-blocks" class="definition">
-<span class="number">4.4</span>Indented code blocks
+<a href="#TOC" class="toc-link"></a><span class="number">4.4</span>Indented code blocks
 </h2.0>
 <p>An <a id="indented-code-block" href="#indented-code-block" class="definition">indented code block</a> is composed of one or more
 <a href="#indented-chunk">indented chunks</a> separated by blank lines.
@@ -2193,7 +2193,7 @@ are not included in it:</p>
 </div>
 </div>
 <h2.0 id="fenced-code-blocks" href="#fenced-code-blocks" class="definition">
-<span class="number">4.5</span>Fenced code blocks
+<a href="#TOC" class="toc-link"></a><span class="number">4.5</span>Fenced code blocks
 </h2.0>
 <p>A <a id="code-fence" href="#code-fence" class="definition">code fence</a> is a sequence
 of at least three consecutive backtick characters (<code>`</code>) or
@@ -2750,7 +2750,7 @@ foo&lt;/p&gt;
 </div>
 </div>
 <h2.0 id="html-blocks" href="#html-blocks" class="definition">
-<span class="number">4.6</span>HTML blocks
+<a href="#TOC" class="toc-link"></a><span class="number">4.6</span>HTML blocks
 </h2.0>
 <p>An <a id="html-block" href="#html-block" class="definition">HTML block</a> is a group of lines that is treated
 as raw HTML (and will not be escaped in HTML output).</p>
@@ -3751,7 +3751,7 @@ deleted.  The exception is inside <code>&lt;pre&gt;</code> tags, but as describe
 above, raw HTML blocks starting with <code>&lt;pre&gt;</code> <em>can</em> contain blank
 lines.</p>
 <h2.0 id="link-reference-definitions" href="#link-reference-definitions" class="definition">
-<span class="number">4.7</span>Link reference definitions
+<a href="#TOC" class="toc-link"></a><span class="number">4.7</span>Link reference definitions
 </h2.0>
 <p>A <a id="link-reference-definition" href="#link-reference-definition" class="definition">link reference definition</a>
 consists of a <a href="#link-label">link label</a>, indented up to three spaces, followed
@@ -4179,7 +4179,7 @@ are defined:</p>
 </div>
 </div>
 <h2.0 id="paragraphs" href="#paragraphs" class="definition">
-<span class="number">4.8</span>Paragraphs
+<a href="#TOC" class="toc-link"></a><span class="number">4.8</span>Paragraphs
 </h2.0>
 <p>A sequence of non-blank lines that cannot be interpreted as other
 kinds of blocks forms a <a id="paragraph" href="#paragraph" class="definition">paragraph</a>.
@@ -4330,7 +4330,7 @@ bbb&lt;/p&gt;
 </div>
 </div>
 <h2.0 id="blank-lines" href="#blank-lines" class="definition">
-<span class="number">4.9</span>Blank lines
+<a href="#TOC" class="toc-link"></a><span class="number">4.9</span>Blank lines
 </h2.0>
 <p><a href="#blank-line">Blank lines</a> between block-level elements are ignored,
 except for the role they play in determining whether a <a href="#list">list</a>
@@ -4358,7 +4358,7 @@ aaa
 </div>
 </div>
 <h1.0 id="container-blocks" href="#container-blocks" class="definition">
-<span class="number">5</span>Container blocks
+<a href="#TOC" class="toc-link"></a><span class="number">5</span>Container blocks
 </h1.0>
 <p>A <a href="#container-block">container block</a> is a block that has other
 blocks as its contents.  There are two basic kinds of container blocks:
@@ -4377,7 +4377,7 @@ to define the syntax, although it does not give a recipe for <em>parsing</em>
 these constructions.  (A recipe is provided below in the section entitled
 <a href="#appendix-a-parsing-strategy">A parsing strategy</a>.)</p>
 <h2.0 id="block-quotes" href="#block-quotes" class="definition">
-<span class="number">5.1</span>Block quotes
+<a href="#TOC" class="toc-link"></a><span class="number">5.1</span>Block quotes
 </h2.0>
 <p>A <a id="block-quote-marker" href="#block-quote-marker" class="definition">block quote marker</a>
 consists of 0-3 spaces of initial indent, plus (a) the character <code>&gt;</code> together
@@ -4925,7 +4925,7 @@ the <code>&gt;</code>:</p>
 </div>
 </div>
 <h2.0 id="list-items" href="#list-items" class="definition">
-<span class="number">5.2</span>List items
+<a href="#TOC" class="toc-link"></a><span class="number">5.2</span>List items
 </h2.0>
 <p>A <a id="list-marker" href="#list-marker" class="definition">list marker</a> is a
 <a href="#bullet-list-marker">bullet list marker</a> or an <a href="#ordered-list-marker">ordered list marker</a>.</p>
@@ -6111,7 +6111,7 @@ baz&lt;/li&gt;
 </div>
 </div>
 <h3.0 id="motivation" href="#motivation" class="definition">
-<span class="number">5.2.1</span>Motivation
+<a href="#TOC" class="toc-link"></a><span class="number">5.2.1</span>Motivation
 </h3.0>
 <p>John Gruber’s Markdown spec says the following about list items:</p>
 <ol>
@@ -6270,7 +6270,7 @@ that in such cases, we require one space indentation from the list marker
 four-space rule in cases where the list marker plus its initial indentation
 takes four spaces (a common case), but diverge in other cases.</p>
 <h2.0 id="lists" href="#lists" class="definition">
-<span class="number">5.3</span>Lists
+<a href="#TOC" class="toc-link"></a><span class="number">5.3</span>Lists
 </h2.0>
 <p>A <a id="list" href="#list" class="definition">list</a> is a sequence of one or more
 list items <a href="#of-the-same-type">of the same type</a>.  The list items
@@ -6974,7 +6974,7 @@ two block elements in the list item:</p>
 </div>
 </div>
 <h1.0 id="inlines" href="#inlines" class="definition">
-<span class="number">6</span>Inlines
+<a href="#TOC" class="toc-link"></a><span class="number">6</span>Inlines
 </h1.0>
 <p>Inlines are parsed sequentially from the beginning of the character
 stream to the end (left to right, in left-to-right languages).
@@ -6995,7 +6995,7 @@ Thus, for example, in</p>
 <p><code>hi</code> is parsed as code, leaving the backtick at the end as a literal
 backtick.</p>
 <h2.0 id="backslash-escapes" href="#backslash-escapes" class="definition">
-<span class="number">6.1</span>Backslash escapes
+<a href="#TOC" class="toc-link"></a><span class="number">6.1</span>Backslash escapes
 </h2.0>
 <p>Any ASCII punctuation character may be backslash-escaped:</p>
 <div class="example" id="example-289">
@@ -7203,7 +7203,7 @@ foo
 </div>
 </div>
 <h2.0 id="entity-and-numeric-character-references" href="#entity-and-numeric-character-references" class="definition">
-<span class="number">6.2</span>Entity and numeric character references
+<a href="#TOC" class="toc-link"></a><span class="number">6.2</span>Entity and numeric character references
 </h2.0>
 <p>All valid HTML entity references and numeric character
 references, except those occuring in code blocks and code spans,
@@ -7407,7 +7407,7 @@ text in code spans and code blocks:</p>
 </div>
 </div>
 <h2.0 id="code-spans" href="#code-spans" class="definition">
-<span class="number">6.3</span>Code spans
+<a href="#TOC" class="toc-link"></a><span class="number">6.3</span>Code spans
 </h2.0>
 <p>A <a id="backtick-string" href="#backtick-string" class="definition">backtick string</a>
 is a string of one or more backtick characters (<code>`</code>) that is neither
@@ -7682,7 +7682,7 @@ closing backtick strings to be equal in length:</p>
 </div>
 </div>
 <h2.0 id="emphasis-and-strong-emphasis" href="#emphasis-and-strong-emphasis" class="definition">
-<span class="number">6.4</span>Emphasis and strong emphasis
+<a href="#TOC" class="toc-link"></a><span class="number">6.4</span>Emphasis and strong emphasis
 </h2.0>
 <p>John Gruber’s original <a href="http://daringfireball.net/projects/markdown/syntax#em">Markdown syntax
 description</a> says:</p>
@@ -9687,7 +9687,7 @@ delimiters:</p>
 </div>
 </div>
 <h2.0 id="links" href="#links" class="definition">
-<span class="number">6.5</span>Links
+<a href="#TOC" class="toc-link"></a><span class="number">6.5</span>Links
 </h2.0>
 <p>A link contains <a href="#link-text">link text</a> (the visible text), a <a href="#link-destination">link destination</a>
 (the URI that is the link destination), and optionally a <a href="#link-title">link title</a>.
@@ -11153,7 +11153,7 @@ is followed by a link label (even though <code>[bar]</code> is not defined):</p>
 </div>
 </div>
 <h2.0 id="images" href="#images" class="definition">
-<span class="number">6.6</span>Images
+<a href="#TOC" class="toc-link"></a><span class="number">6.6</span>Images
 </h2.0>
 <p>Syntax for images is like the syntax for links, with one
 difference. Instead of <a href="#link-text">link text</a>, we have an
@@ -11501,7 +11501,7 @@ backslash-escape the opening <code>[</code>:</p>
 </div>
 </div>
 <h2.0 id="autolinks" href="#autolinks" class="definition">
-<span class="number">6.7</span>Autolinks
+<a href="#TOC" class="toc-link"></a><span class="number">6.7</span>Autolinks
 </h2.0>
 <p><a id="autolink" href="#autolink" class="definition">Autolink</a>s are absolute URIs and email addresses inside
 <code>&lt;</code> and <code>&gt;</code>. They are parsed as links, with the URL or email address
@@ -11789,7 +11789,7 @@ spec</a>:</p>
 </div>
 </div>
 <h2.0 id="raw-html" href="#raw-html" class="definition">
-<span class="number">6.8</span>Raw HTML
+<a href="#TOC" class="toc-link"></a><span class="number">6.8</span>Raw HTML
 </h2.0>
 <p>Text between <code>&lt;</code> and <code>&gt;</code> that looks like an HTML tag is parsed as a
 raw HTML tag and will be rendered in HTML without escaping.
@@ -12150,7 +12150,7 @@ attributes:</p>
 </div>
 </div>
 <h2.0 id="hard-line-breaks" href="#hard-line-breaks" class="definition">
-<span class="number">6.9</span>Hard line breaks
+<a href="#TOC" class="toc-link"></a><span class="number">6.9</span>Hard line breaks
 </h2.0>
 <p>A line break (not in a code span or HTML tag) that is preceded
 by two or more spaces and does not occur at the end of a block
@@ -12383,7 +12383,7 @@ other block element:</p>
 </div>
 </div>
 <h2.0 id="soft-line-breaks" href="#soft-line-breaks" class="definition">
-<span class="number">6.10</span>Soft line breaks
+<a href="#TOC" class="toc-link"></a><span class="number">6.10</span>Soft line breaks
 </h2.0>
 <p>A regular line break (not in a code span or HTML tag) that is not
 preceded by two or more spaces or a backslash is parsed as a
@@ -12427,7 +12427,7 @@ line break or as a space.</p>
 <p>A renderer may also provide an option to render soft line breaks
 as hard line breaks.</p>
 <h2.0 id="textual-content" href="#textual-content" class="definition">
-<span class="number">6.11</span>Textual content
+<a href="#TOC" class="toc-link"></a><span class="number">6.11</span>Textual content
 </h2.0>
 <p>Any characters not given an interpretation by the above rules will
 be parsed as plain textual content.</p>
